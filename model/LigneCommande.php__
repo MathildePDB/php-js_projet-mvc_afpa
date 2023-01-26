@@ -1,0 +1,63 @@
+<?php
+class Article
+{
+    // definition des variables accessibles uniquement ici
+
+    private $id;
+    private $commande_id;
+    private $article_id;
+    private $quantite;
+
+    // fonction construct qui permet de convertir la table en objet
+
+    public function __construct($data = [])
+    {
+        if ($data) {
+            foreach ($data as $indice => $valeur) {
+                $set = 'set' . ucfirst($indice);
+                if (method_exists($this, $set)) {
+                    $this->$set($valeur);
+                }
+            }
+        }
+    }
+
+    // fonctions qui permettent de récupérer et de convertir les différentes valeurs de la table
+
+    public function getId()
+    {
+        return $this->id;
+    }
+    public function setId($id)
+    {
+        $this->id = $id;
+        return $this;
+    }
+    public function getCommande_id()
+    {
+        return $this->commande_id;
+    }
+    public function setCommande_id($commande_id)
+    {
+        $this->commande_id = $commande_id;
+        return $this;
+    } 
+    public function getArticle_id()
+    {
+        return $this->article_id;
+    }
+    public function setArticle_id($article_id)
+    {
+        $this->article_id = $article_id;
+        return $this;
+    }
+    public function getQuantite()
+    {
+        return $this->quantite;
+    }
+    public function setQuantite($quantite)
+    {
+        $this->quantite = $quantite;
+        return $this;
+    }
+}

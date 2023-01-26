@@ -1,0 +1,21 @@
+<?php
+
+class LignecommandeManager extends Manager implements InterfaceManager
+{
+    public function findById($id)
+    {
+        $lignecommande = $this->tableFindById('lignecommande', $id);
+        return $lignecommande;
+    }
+
+    public function findAll()
+    {
+        $lignecommandes = $this -> tableFindAll('lignecommande');
+        return $lignecommandes;
+    }
+
+    public function findOne() {
+        $lignecommande = $this -> tableFindOne('lignecommande'); 
+        return $lignecommande;
+    }
+}

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appli - Gestion</title>
+    <link rel="stylesheet" href="bootstrap-5.0.2-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="fontawesome/css/all.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="d-flex justify-content-center m-5">
+            <div id="section" class="col-md-9 m-5">
+                <?= $content ?>
+            </div>
+        </div>
+        <footer class="bg-dark fixed-bottom p-2">
+            <p class="text-light text-center">Afpa 2022</p>
+        </footer>
+    </div>
+    <script src="bootstrap-5.0.2-dist/js/bootstrap.bundle.js"></script>
+    <script src="js/myScript.js"></script>
+    <script>
+       
+    </script>
+</body>
+
+</html>
